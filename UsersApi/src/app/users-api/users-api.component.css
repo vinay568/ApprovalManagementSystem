@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.api
+{
+    background-color: aqua;
+}
+.header{
+    height: 100vh;
+}
+.navbar-style{
+box-shadow: 0 5px 10px #efefef;
+}
+.logo{
+    height:45px;
+    padding:2px 5px;
+}
+.header{
+    background-color: aquamarine;
+}
+.api
+{
+    background-color:rgb(92, 160, 86);
+}
+
+#app
+{
+    background-color: aquamarine;
+    text-decoration: solid;
+}
+.card-body{
+    align-items: center;
+}
+.navbar-nav
+{
+    justify-items: right;
+}
+#hover-content {
+
+    display:none;
+
+}
+
+
+
+#parent:hover #hover-content {
+
+    display:block;
+
+}
