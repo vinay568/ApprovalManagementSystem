@@ -1,0 +1,7 @@
+<p>parent-component works!</p>
+<!-- <h5>Mynumber is {{counter}}</h5> -->
+<!-- <button type="button" class="btn btn-primary" (click)="increment()">Increment</button>
+<button type="button" class="btn btn-danger" (click)="decrement()">Decrement</button> -->
+<app-child-component [myNumber]="counter" (childInfo)="msg=$event"></app-child-component>
+
+<h5>{{msg}}</h5>
