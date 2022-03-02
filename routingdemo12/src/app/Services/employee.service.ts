@@ -16,6 +16,7 @@ export class EmployeeService {
       new Employee(3,'Swati','Hyderabad','Female',false),
       new Employee(4,'John','Odissa','Male',true),
       new Employee(5,'Amit','Delhi','Male',true),
+      new Employee(10,'Ajay','Ukraine','Male',true),
     ]
    }
 

@@ -8,6 +8,8 @@ Date Pipe: {{todaydate|date:'d/m/y'}}<br/>
 jsonValue:{{jsonValue|json}}
 <br/><br/>
 
+<input type="text" [(ngModel)]="filterId">
+<!-- <button type="button" #item value="{{IdFilter | filterId}}"(click)="button(item.value)"></button> -->
 <h3> Employee Table</h3>
 <table class="table table-bordered">
     <thead>
@@ -19,13 +21,15 @@ jsonValue:{{jsonValue|json}}
             <th>Is Active</th>
         </tr>
     </thead>
+
     <tbody>
-        <tr *ngFor="let employees of details">
+        
+        <tr *ngFor="let employees of details | idFilter:filterId">
             <td>{{employees.id}}</td>
             <td>{{employees.name|uppercase|assignInitial: employees.gender}}</td>
-                <td>{{employees.location|titlecase}}</td>
-                    <td>{{employees.gender}}</td>
-                    <td>{{employees.isActive?'YES' : 'NO'}}</td>
+            <td>{{employees.location|titlecase}}</td>
+            <td>{{employees.gender}}</td>
+            <td>{{employees.isActive?'YES' : 'NO'}}</td>
         </tr>
     </tbody>
 </table>

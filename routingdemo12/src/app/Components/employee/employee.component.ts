@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeService } from 'src/app/Services/employee.service';
 import { AssignInitialPipe } from 'src/app/SharedModule/assign-initial.pipe';
+import { IdFilterPipe } from 'src/app/SharedModule/id-filter.pipe';
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -16,6 +17,7 @@ empid: number;
 ID:number;
 Name:string;
 location:string;
+filterId :any = "";
 
   constructor(private activate: ActivatedRoute, private router: Router, private _empService:EmployeeService) { }
 
