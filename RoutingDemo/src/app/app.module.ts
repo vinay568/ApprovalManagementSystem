@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './Components/employee-list/employee-list.component';
 import { IdFilterPipe } from './Pipes/id-filter.pipe';
+import { CustomDirectiveDirective } from './custom-directive.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    IdFilterPipe
+    IdFilterPipe,
+    CustomDirectiveDirective
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+<h1 style="color:chocolate">Employee List Of EMI</h1>
+<h1 appCustomDirective>Employee Search Box</h1>
+<input type="text" [(ngModel)]="filterId">SearchBox
+<!-- <button type="button" #item value="{{IdFilter | filterId}}"(click)="button(item.value)"></button> -->
+<h3> Employee Table</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Gender</th>
+            <th>Is Active</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        <tr *ngFor="let employees of details | idFilter:filterId">
+            <td>{{employees.id}}</td>
+            <td>{{employees.name}}</td>
+            <td>{{employees.location|titlecase}}</td>
+            <td>{{employees.gender}}</td>
+            <td>{{employees.isActive?'YES' : 'NO'}}</td>
+        </tr>
+    </tbody>
+</table>
