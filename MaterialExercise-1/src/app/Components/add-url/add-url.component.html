@@ -1,0 +1,79 @@
+<div class="example-container mat-elevation-z8">
+    <div class="example-loading-shade">
+
+    </div>
+    <div>
+        <a mat-raised-button color="primary" [routerLink]="['/url']"><mat-icon>home</mat-icon></a>
+    </div>
+    <mat-card class="example-card">
+        <form [formGroup]="dataForm" (ngSubmit)="onFormSubmit(dataForm.value)" >
+
+            <mat-form-field>
+                
+                <input matInput type="text" placeholder="Enter id" formControlName="id">
+                <!-- [error matchers] -->
+                <mat-error>
+                    <span *ngIf="!dataForm.get('id')?.valid && dataForm.get('id')?.touched">Id Required</span>
+                </mat-error>
+            </mat-form-field><br>
+
+            <mat-form-field>
+                
+                <input matInput type="text" placeholder="Enter source Url" formControlName="from">
+                <!-- [error matchers] -->
+                <mat-error>
+                    <span *ngIf="!dataForm.get('from')?.valid && dataForm.get('from')?.touched">Url Required</span>
+                </mat-error>
+            </mat-form-field><br>
+
+            <mat-form-field>
+                
+                <input matInput type="text" placeholder="Enter destination Url" formControlName="to">
+                <!-- [error matchers] -->
+                <mat-error>
+                    <span *ngIf="!dataForm.get('to')?.valid && dataForm.get('to')?.touched">Url Required</span>
+                </mat-error>
+            </mat-form-field><br>
+
+            <mat-form-field appearance="fill" >
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="dateCreated">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error>
+                    <span *ngIf="!dataForm.get('dateCreated')?.valid && dataForm.get('dateCreated')?.touched">Date Required</span>
+                </mat-error>
+              </mat-form-field><br>
+              
+              
+<!-- 
+            <mat-form-field>
+                <mat-label >Permanent Link:</mat-label>
+                <input matInput type="text"  formControlName="permanentLink">
+                
+                <mat-error>
+                    <span *ngIf="!dataForm.get('permanentLink')?.valid && dataForm.get('permanentLink')?.touched">Value Required</span>
+                </mat-error>
+            </mat-form-field> -->
+
+            <mat-form-field appearance="fill">
+                <mat-label>Permanent Link</mat-label>
+                <mat-select formControlName="permanentLink">
+                  <mat-option [value]="true">Yes</mat-option>
+                  <mat-option [value]="false">No</mat-option>
+                </mat-select>
+                <mat-error>
+                    <span *ngIf="!dataForm.get('permanentLink')?.valid && dataForm.get('permanentLink')?.touched">Value Required</span>
+                </mat-error>
+              </mat-form-field>
+
+            <div>
+                <button type="submit"><mat-icon>save</mat-icon></button>
+            </div>
+            <div>
+                <button type="cancel" (click)="onCancel()"><mat-icon>cancel</mat-icon></button>
+            </div>
+        </form>
+    </mat-card>
+
+</div>
