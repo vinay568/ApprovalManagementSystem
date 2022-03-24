@@ -69,6 +69,13 @@
       "to": "/hello-vinay",
       "dateCreated": "2022-03-16T18:30:00.000Z",
       "permanentLink": false
+    },
+    {
+      "id": "9865",
+      "from": "/andhra",
+      "to": "/telangana",
+      "dateCreated": "2022-03-22T18:30:00.000Z",
+      "permanentLink": false
     }
   ]
 }
