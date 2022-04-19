@@ -1,0 +1,16 @@
+{
+  "Accounts": [
+    {
+      "id": "1928",
+      "email": "vinay.admin@co.in",
+      "password": "Abc@123",
+      "isAdmin": true
+    },
+    {
+      "id": "2023",
+      "email": "jhon123@gmail.com",
+      "password": "Jhon456@",
+      "isAdmin": false
+    }
+  ]
+}

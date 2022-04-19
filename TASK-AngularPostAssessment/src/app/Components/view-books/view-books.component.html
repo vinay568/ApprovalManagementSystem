@@ -1,0 +1,25 @@
+<app-nav-bar></app-nav-bar>
+<div class="box">
+    <div class="button">
+        <button mat-raised-button color="primary" routerLink="/home">Back</button>
+    </div>
+    <div class="row">
+        
+    <div class="col-md-12" *ngFor="let data of books ">
+        <div class="card">
+            <mat-card-title>
+                {{data.name}}
+            </mat-card-title>
+            <mat-card-subtitle >
+                {{data.author}}
+            </mat-card-subtitle><br>
+            <mat-card-content>
+                {{data.description}}<br>
+               <img src="../assets/images/booksLogo.jfif" width="150px" height="100px" alt="Book logo"><br><br>
+                Return Date : {{date | date: 'mediumDate'}} 
+            </mat-card-content><br>
+            
+        </div>
+    </div>
+</div>
+</div>

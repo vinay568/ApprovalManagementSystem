@@ -1,0 +1,62 @@
+<div class="example-container mat-elevation-z8">
+    <div class="example-loading-shade">
+
+    </div>
+    
+    <mat-card class="example-card">
+        <form [formGroup]="dataForm" (ngSubmit)="onFormSubmit(dataForm.value)" >
+
+            <mat-form-field>
+                
+                <input matInput type="text" placeholder="Enter id" formControlName="id">
+                
+            </mat-form-field><br>
+
+            <mat-form-field>
+                
+                <input matInput type="text" placeholder="Enter Book Name" formControlName="name">
+                
+            </mat-form-field><br>
+
+            <mat-form-field>
+                
+                <input matInput type="text" placeholder="Enter Author Name" formControlName="author">
+                
+                
+            </mat-form-field><br>
+
+            <mat-form-field>
+                
+                <input matInput type="text" placeholder="Enter description of book" formControlName="description">
+                
+                
+            </mat-form-field><br>
+
+            <mat-form-field>
+                
+                <input matInput type="text" placeholder="Enter no.of books" formControlName="count">
+                
+                
+            </mat-form-field><br>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Available </mat-label>
+                <mat-select formControlName="available">
+                  <mat-option [value]="true">Yes</mat-option>
+                  <mat-option [value]="false">No</mat-option>
+                </mat-select>
+                
+              </mat-form-field>
+
+            <div>
+                <button type="submit" class="btn btn-primary" >Update</button>&nbsp;
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onCancel()">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+            
+        </form>
+    </mat-card>
+
+</div>
+
+

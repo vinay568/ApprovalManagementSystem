@@ -1,0 +1,35 @@
+<app-nav-bar></app-nav-bar>
+<div class=" box">
+    <br>
+    <div>
+        <input type="text" [(ngModel)]="filterId" style="font-style:italic" placeholder=" Search by Book name">
+    </div>
+    <br>
+    <div class="row">
+        
+        <div class="col-md-4" *ngFor="let data of books | filter:filterId">
+            <div class="card">
+                <mat-card-title>
+                    {{data.name}}
+                </mat-card-title>
+                <mat-card-subtitle >
+                    {{data.author}}
+                </mat-card-subtitle><br>
+                <mat-card-content>
+                    {{data.description}}<br>
+                   <img src="../assets/images/booksLogo.jfif" width="150px" height="100px" alt="Book logo"><br>
+                   Availability    : {{data.available ? 'Yes':'No'}}<br>
+                </mat-card-content><br>
+                <mat-card-footer>
+                
+                    <button mat-raised-button color="primary" [disabled]=" !data.available " (click)="onRequest(data)">
+                        Request
+                    </button>
+                
+                </mat-card-footer><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+
