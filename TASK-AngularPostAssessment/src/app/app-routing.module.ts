@@ -7,14 +7,15 @@ import { LoginComponent } from './Components/login/login.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { ViewBooksComponent } from './Components/view-books/view-books.component';
 import { AdminAccessGuard } from './Guards/admin-access.guard';
+import { UserAccessGuard } from './Guards/user-access.guard';
 
 const routes: Routes = [
 
   {path:'',redirectTo:'/login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
-  {path:'home',component:HomeComponent },
-  {path:'adminHome',component:AdminHomeComponent },
-  {path:'mybooks',component:ViewBooksComponent },
+  {path:'home',component:HomeComponent,canActivate:[UserAccessGuard] },
+  {path:'adminHome',component:AdminHomeComponent,canActivate:[AdminAccessGuard] },
+  {path:'mybooks',component:ViewBooksComponent,canActivate:[UserAccessGuard] },
   {path:'notfound',component:PageNotFoundComponent }
 
 ];
