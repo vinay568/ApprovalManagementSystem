@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
-import { LoginComponent } from '../Components/login/login.component';
-import { AccountService } from '../Services/account.service';
-import { AuthService } from '../Services/auth.service';
+
 
 
 @Injectable({
@@ -10,11 +8,11 @@ import { AuthService } from '../Services/auth.service';
 })
 export class AdminAccessGuard implements CanActivate {
 
-  constructor( private authService :AuthService, private route: Router){}
+  constructor(  private route: Router){}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
-     if(this.authService){
+     if(localStorage.getItem('role')=='1'){
        return true;
      }
      else{

@@ -48,12 +48,12 @@ public isAuthenticated = false;
       this.loginForm.reset();
       if(this.user.isAdmin)
       {
-        
+        localStorage.setItem('role','1');
         this.isAuthenticated=true;
         this.route.navigate(['adminHome']);
       }
       else{
-        
+        localStorage.setItem('role','2');
         this.isAuthenticated=true;
         this.route.navigate(['home']);
       }

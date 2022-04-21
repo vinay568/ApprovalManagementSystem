@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { BooksTable } from 'src/app/Models/books.model'
 import { AccountsModel } from '../Models/accounts.model';
 
 @Injectable({
