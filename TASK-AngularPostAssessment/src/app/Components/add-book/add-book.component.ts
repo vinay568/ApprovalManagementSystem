@@ -35,7 +35,6 @@ public onFormSubmit(form: NgForm){
 
   this.booksService.addBooks(form).subscribe( response =>{
     console.log(response);
-    //const id = response['id'];
     this._toaster.success("Book added successfully");
     this.dialogRef.close();
   },

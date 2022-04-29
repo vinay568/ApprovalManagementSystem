@@ -9,7 +9,7 @@
             <mat-form-field>
                 
                 <input matInput type="text" placeholder="Enter id" formControlName="id">
-                <!-- [error matchers] -->
+             
                 <mat-error>
                     <span *ngIf="!dataForm.get('id')?.valid && dataForm.get('id')?.touched">Id Required</span>
                 </mat-error>
@@ -18,7 +18,7 @@
             <mat-form-field>
                 
                 <input matInput type="text" placeholder="Enter Book Name" formControlName="name">
-                <!-- [error matchers] -->
+               
                 <mat-error>
                     <span *ngIf="!dataForm.get('name')?.valid && dataForm.get('name')?.touched">Book Name Required</span>
                 </mat-error>
@@ -27,7 +27,7 @@
             <mat-form-field>
                 
                 <input matInput type="text" placeholder="Enter Author Name" formControlName="author">
-                <!-- [error matchers] -->
+               
                 <mat-error>
                     <span *ngIf="!dataForm.get('author')?.valid && dataForm.get('author')?.touched">Author Name Required</span>
                 </mat-error>
@@ -36,7 +36,7 @@
             <mat-form-field>
                 
                 <input matInput type="text" placeholder="Enter Description of book " formControlName="description">
-                <!-- [error matchers] -->
+               
                 <mat-error>
                     <span *ngIf="!dataForm.get('description')?.valid && dataForm.get('description')?.touched">Description of Book is Required</span>
                 </mat-error>
@@ -45,7 +45,7 @@
             <mat-form-field>
                 
                 <input matInput type="text" placeholder="Enter no.of books" formControlName="count">
-                <!-- [error matchers] -->
+              
                 <mat-error>
                     <span *ngIf="!dataForm.get('count')?.valid && dataForm.get('count')?.touched">No.of Books Required</span>
                 </mat-error>
@@ -65,7 +65,7 @@
             <div>
                 <button type="submit" class="btn btn-primary" [disabled]="!dataForm.valid">Add</button>&nbsp;
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onCancel()">Close</button>
-                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                
             </div>
             
         </form>

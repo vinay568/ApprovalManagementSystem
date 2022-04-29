@@ -1,5 +1,5 @@
 export class RequestedBooks{
-    // id:number;
+    id:number;
     name:string;
     author:string;
     description:string;
@@ -7,12 +7,12 @@ export class RequestedBooks{
     available:boolean;
 
 
-    constructor(name:string,author:string,description:string,count:number,available:boolean){
-        // id=this.id;
-        name=this.name;
-        author = this.author;
-        description=this.description;
-        count=this.count;
-        available=this.available;
+    constructor(id:number,name:string,author:string,description:string,count:number,available:boolean){
+        this.id=id
+        this.name=name;
+         this.author=author;
+        this.description=description;
+        this.count=count;
+        this.available=available;
     }
 }
