@@ -35,10 +35,10 @@
 
             <mat-form-field>
                 
-                <input matInput type="text" placeholder="Enter Description of book " formControlName="author">
+                <input matInput type="text" placeholder="Enter Description of book " formControlName="description">
                 <!-- [error matchers] -->
                 <mat-error>
-                    <span *ngIf="!dataForm.get('author')?.valid && dataForm.get('author')?.touched">Author Name Required</span>
+                    <span *ngIf="!dataForm.get('description')?.valid && dataForm.get('description')?.touched">Description of Book is Required</span>
                 </mat-error>
             </mat-form-field><br>
 
@@ -63,7 +63,7 @@
               </mat-form-field>
 
             <div>
-                <button type="submit" class="btn btn-primary">Add</button>&nbsp;
+                <button type="submit" class="btn btn-primary" [disabled]="!dataForm.valid">Add</button>&nbsp;
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onCancel()">Close</button>
                 <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
             </div>
